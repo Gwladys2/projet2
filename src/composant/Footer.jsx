@@ -1,10 +1,21 @@
+import React from "react";
+import footer from "../assets/footer.svg"
+import footer2 from "../assets/footer2.svg"
+
+
+
 function Footer(){
 
 
     return(
-        <div>
-            <h1>Voici le footer</h1>
-        </div>
+       <div>
+          <footer className={"footer"}>
+              <img src={footer} alt={"logo-footer"}/>
+          </footer>
+           <footer className={"footer2"}>
+               <img src={footer2} alt={"logo-footer2"}/>
+           </footer>
+       </div>
     )
 }
 

@@ -1,10 +1,31 @@
+import {Link} from "react-router-dom";
+import React from "react";
+import logo from "../assets/logo.svg"
+
+
 function Header(){
 
 
     return(
         <div>
-            <h1>Voici l'entête (le header)</h1>
-            <p>ici sera la barre de navigation</p>
+         <header>
+             <nav className={"navbar"}>
+                 <img src={logo} alt={"logo-entête"}/>
+                 <ul className={"sm-show"}>
+                     <li className={"sm-item"}>
+                         <Link to={"/"}>Accueil</Link>
+                     </li>
+
+                     <li>
+                         <Link to={"/propos"} className={"sm-item"}>A propos</Link>
+                     </li>
+
+                 </ul>
+
+             </nav>
+
+
+         </header>
         </div>
     )
 }

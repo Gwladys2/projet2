@@ -3,20 +3,25 @@ import './App.css'
 import {BrowserRouter, Routes,Route} from "react-router-dom";
 import Home from "./composant/Home.jsx";
 import Apropos from "./composant/Apropos.jsx";
-import Donnees from "./composant/Donnees.jsx";
+import Header from "./composant/Header.jsx";
+import Footer from "./composant/Footer.jsx";
+
 
 
 function App() {
 
 
   return (
-    <div>
+        <div className={"app-container"}>
         <BrowserRouter>
+            <Header/>
+            <div className={"content"}>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/propos"} element={<Apropos/>}/>
-                <Route path={"/donnees"} element={<Donnees/>}/>
             </Routes>
+            </div>
+            <Footer/>
         </BrowserRouter>
 
     </div>
