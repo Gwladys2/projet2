@@ -1,0 +1,115 @@
+.slider
+   position: relative
+   width: 100%
+   max-width: 1240px
+   height: 700px
+   margin: auto
+   overflow: hidden
+
+.slider-images
+   position: relative
+   width: 100%
+   display: flex
+   justify-content: center
+   align-items: center
+
+.slide
+   max-width: 100%
+   max-height: 100%
+   display: none
+   object-fit: cover
+
+.slide.active
+   display: block
+
+button
+   position: absolute
+   top: 50%
+   transform: translateY(-50%)
+   background-color: transparent
+   border: none
+   padding: 0
+   cursor: pointer
+   z-index: 10
+
+button img
+   width: 50px
+   height: 50px
+
+button:first-of-type
+   left: 10px
+
+button:last-of-type
+   right: 10px
+
+button:hover img
+   transform: scale(1.1)
+
+
+
+h1
+   color: #FF6060
+   margin-top: 50px
+   text-align: center
+   font-size: 35px
+   margin-bottom: 30px
+
+
+.description
+   margin-top: 100px
+
+
+.titre-description
+   background-color: #FF6060
+   margin: 0
+   padding: 0
+   font-size: 1rem
+
+.description-toggle-container
+   width: 48%
+
+
+.description-toggle-button
+   display: block
+   padding: 10px
+   background-color: #FF6060
+   color: #fff
+   border: none
+   text-align: center
+   cursor: pointer
+   font-size: 16px
+   font-weight: bold
+   border-radius: 4px
+   outline: none
+   margin-bottom: 50px
+   width: 500px
+
+
+.description-content
+   padding: 10px
+   background-color: #fff
+   width: 450px
+   color: #333
+   display: none
+   border: 1px solid #ccc
+   overflow: hidden
+   transition: max-height 30s ease-out
+   margin-left: 10px
+
+
+.description-toggle-wrapper
+   display: flex
+   justify-content: space-between
+
+ul img
+   margin-left: 400px
+   margin-bottom: 20px
+
+
+.description-content.show
+   display: block
+
+
+.details
+   margin-left: 100px
+

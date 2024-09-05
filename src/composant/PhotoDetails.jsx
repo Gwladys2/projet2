@@ -1,5 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
+import Slider from "./Slider.jsx";
+import DescriptionToggle from "./DescriptionToggle.jsx";
 
 function PhotoDetails({ data }){
 
@@ -13,9 +15,12 @@ function PhotoDetails({ data }){
 
     return(
         <div className={"container3"}>
+            <Slider images={photo.pictures}/>
             <h1>{photo.title}</h1>
-            <img src={photo.cover} alt={photo.title} className={"w-full h-auto"}/>
+            <p>{photo.location}</p>
             <p>{photo.description}</p>
+
+            <DescriptionToggle description={photo.description} equipements={photo.equipments}/>
         </div>
     );
 }
