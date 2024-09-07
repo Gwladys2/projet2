@@ -4,8 +4,6 @@ html, body
   height: 100%
   box-sizing: border-box
 
-
-
 .app-container
   display: flex
   flex-direction: column
@@ -14,8 +12,11 @@ html, body
 .content
   flex: 1
   padding: 45px
-  margin-top: 100px
+  margin-top: 250px
 
+.content-data
+  margin-top: 250px
+  padding: 45px
 
 .navbar
   position: fixed
@@ -29,36 +30,40 @@ html, body
   padding: 0 5px
   z-index: 1000
 
+
   a
     color: black
 
+  .navbar-logo
+    margin-left: 45px
+    margin-top: 45px
 
-.navbar-logo
-  margin-left: 45px
-  margin-top: 45px
+  ul
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+    background-color: white
 
-.navbar ul
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: flex-end
-  width: 100%
-  background-color: white
+    li
+      list-style: none
+      margin-right: 90px
+      font-size: 24px
+      align-items: center
 
-.navbar ul li
-  list-style: none
-  margin-right: 90px
-  font-size: 24px
-  align-items: center
 
 .footer
-  width: 100%
-  height: 209px
+  width: 1520px
+  height: 230px
   background-color: black
   text-align: center
   padding: 20px
   position: relative
   margin-top: auto
+  left: 0
+  box-sizing: border-box
+
 
 .footer2
   display: none
@@ -71,36 +76,43 @@ html, body
   padding-right: 1rem
   margin-top: 2500px
 
-.container3
-  margin-top: 700px
 
 .grid
   display: grid
   gap: 1rem
-  grid-template-columns: repeat(3,1fr)
+  grid-template-columns: repeat(3, 1fr)
 
-
+  @media (max-width: 1024px)
+    grid-template-columns: repeat(2, 1fr)
 
   @media (max-width: 640px)
     grid-template-columns: 1fr
 
 .card
   max-width: 100%
-  border-radius: 6px
+  border-radius: 0.375rem
   overflow: hidden
-  box-shadow: 0 10px 15px -3px rgb(0,0,0,0.1), 0 4px 6px -2px rgb(0,0,0,0.5)
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
   margin: 1rem
 
   img
     width: 100%
     height: auto
 
+  img:hover
+    transform: scale(1.1)
+    transition: transform 0.3s ease
 
 .banniere
   margin-left: 70px
 
 .banniere2
   display: none
+
+.notFound
+  margin-top: 10px
+
+
 @media (max-width: 640px)
   .navbar
 
@@ -108,62 +120,63 @@ html, body
     justify-content: space-between
     align-items: center
     padding: 10px 15px 15px 15px
-    width: calc(100% - 60px)
+    width: 500px
     margin-right: 80px
     box-sizing: border-box
-
-  a
-    font-size: 12px
-
 
   .navbar img
     width: 122px
     margin-top: 0
 
-
-  .navbar ul
+  ul
     display: flex
-    flex-direction: row
     justify-content: flex-end
     margin-left: 0px
     margin-right: 15px
     width: auto
     background-color: white
 
-  .navbar ul li
+  li
+
     width: 80px
     margin-right: 10px
 
-  .content
-    margin-top: 3200px
+
+  a
+    font-size: 12px
+
+  .content-data
+    margin-top: 4500px
+    padding: 0
+
+
 
   .home
     padding: 10px 10px
     width: 400px
-    margin-top: 900px
+    margin-top: 800px
     box-sizing: border-box
     display: flex
     flex-direction: column
     align-items: flex-start
-
-  .footer
-    display: none
-
-  .footer2
-    display: block
-    width: 100%
-    background-color: black
-
-  .footer2 img
-    margin-left: 50px
 
   .banniere
     display: none
 
   .banniere2
     display: block
+
     width: 100%
 
+  .footer
+    display: none
+    width: 100%
+
+  .footer2
+    display: block
+    width: 100%
+    background-color: black
 
 
-
+  .footer2 img
+    margin-left: 50px

@@ -17,10 +17,10 @@
    max-width: 100%
    max-height: 100%
    display: none
-   object-fit: cover
+   object-fit: cover // Pour s'assurer que l'image reste proportionnelle et ne soit pas étirée
 
-.slide.active
-   display: block
+   &.active
+      display: block
 
 button
    position: absolute
@@ -32,20 +32,18 @@ button
    cursor: pointer
    z-index: 10
 
-button img
-   width: 50px
-   height: 50px
+   img
+      width: 50px // Ajustez la taille des flèches ici si nécessaire
+      height: 50px
 
-button:first-of-type
-   left: 10px
+   &:first-of-type
+      left: 10px
 
-button:last-of-type
-   right: 10px
+   &:last-of-type
+      right: 10px
 
-button:hover img
-   transform: scale(1.1)
-
-
+   &:hover img
+      transform: scale(1.1) // Augmentez légèrement la taille des flèches au survol
 
 h1
    color: #FF6060
@@ -54,20 +52,17 @@ h1
    font-size: 35px
    margin-bottom: 30px
 
-
 .description
    margin-top: 100px
 
-
 .titre-description
    background-color: #FF6060
-   margin: 0
-   padding: 0
+   margin: 0 // Enlève la marge par défaut
+   padding: 0 // Enlève le padding si nécessaire
    font-size: 1rem
 
 .description-toggle-container
-   width: 48%
-
+   width: 48% // Ajuste selon tes besoins
 
 .description-toggle-button
    display: block
@@ -84,18 +79,19 @@ h1
    margin-bottom: 50px
    width: 500px
 
-
 .description-content
    padding: 10px
    background-color: #fff
    width: 450px
    color: #333
-   display: none
+   display: none // Cacher la description par défaut
    border: 1px solid #ccc
    overflow: hidden
    transition: max-height 30s ease-out
    margin-left: 10px
 
+   &.show
+      display: block
 
 .description-toggle-wrapper
    display: flex
@@ -105,11 +101,66 @@ ul img
    margin-left: 400px
    margin-bottom: 20px
 
-
-.description-content.show
-   display: block
-
-
 .details
    margin-left: 100px
+
+.rating
+   margin-left: 1000px
+
+@media (max-width: 640px)
+   .slider
+      height: 300px
+
+   .slider img
+      margin-top: 50px
+
+   button img
+      width: 2px
+      height: 2px
+
+   h1
+      font-size: 24px
+      margin-top: 20px
+      margin-bottom: 15px
+
+   .description
+      margin-top: 50px
+
+   .description-toggle-container
+      width: 100%
+
+   .description-toggle-wrapper
+      flex-direction: column
+      align-items: flex-start
+
+   .description-toggle-button
+      width: 100%
+      font-size: 14px
+
+   .description-content
+      width: auto
+      margin-left: 0
+
+   .photo-details-content
+      margin-top: 500px
+
+   ul img
+      margin-left: 0
+      margin-bottom: 10px
+
+   @media (max-width: 640px)
+   .container3
+      margin-top: 0
+      padding: 10px
+
+   .rating
+      margin-left: 0
+      margin-top: 20px // Ajouter un espacement si nécessaire
+
+   .details
+      margin-left: 0
+
+   .description-toggle-wrapper
+      flex-direction: column
+      align-items: center
 

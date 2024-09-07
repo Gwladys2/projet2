@@ -2,6 +2,8 @@ import React from "react";
 import {useParams} from "react-router-dom";
 import Slider from "./Slider.jsx";
 import DescriptionToggle from "./DescriptionToggle.jsx";
+import StarRating from "./StarRating.jsx";
+import '../slider.css';
 
 function PhotoDetails({ data }){
 
@@ -18,8 +20,8 @@ function PhotoDetails({ data }){
             <Slider images={photo.pictures}/>
             <h1>{photo.title}</h1>
             <p>{photo.location}</p>
-            <p>{photo.description}</p>
 
+            <StarRating rating={parseInt(photo.rating, 10)}/>
             <DescriptionToggle description={photo.description} equipements={photo.equipments}/>
         </div>
     );

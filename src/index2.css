@@ -1,0 +1,84 @@
+.container111 {
+  padding: 20px;
+  margin: 0 auto;
+  display: block;
+  width: 800px;
+}
+
+.description111 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.description111 li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.description-titre {
+  cursor: pointer;
+  background-color: #FF6060;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+.descriptionText {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: white;
+  padding: 0 10px;
+}
+
+.descriptionText.expanded {
+  max-height: 200px;
+}
+
+.global img {
+  margin-left: 70px;
+  margin-top: 100px;
+}
+
+.global {
+  margin-top: 60px;
+}
+
+@media (max-width: 640px) {
+  .container111 {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    display: block;
+  }
+  .description-titre {
+    font-size: 20px;
+    padding: 8px;
+    background-color: #FF6060;
+    width: 100%;
+  }
+  .descriptionText {
+    padding: 0 8px;
+    background-color: white;
+    width: 100%;
+  }
+  .global img {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 10px;
+    margin-top: 0;
+    height: 120px;
+  }
+  .global {
+    display: block;
+  }
+  .descriptionText.expanded {
+    max-height: 500px;
+  }
+}
+
+/*# sourceMappingURL=index2.css.map */

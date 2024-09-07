@@ -21,7 +21,6 @@
   display: none;
   object-fit: cover;
 }
-
 .slide.active {
   display: block;
 }
@@ -36,20 +35,16 @@ button {
   cursor: pointer;
   z-index: 10;
 }
-
 button img {
   width: 50px;
   height: 50px;
 }
-
 button:first-of-type {
   left: 10px;
 }
-
 button:last-of-type {
   right: 10px;
 }
-
 button:hover img {
   transform: scale(1.1);
 }
@@ -104,6 +99,9 @@ h1 {
   transition: max-height 30s ease-out;
   margin-left: 10px;
 }
+.description-content.show {
+  display: block;
+}
 
 .description-toggle-wrapper {
   display: flex;
@@ -115,12 +113,70 @@ ul img {
   margin-bottom: 20px;
 }
 
-.description-content.show {
-  display: block;
-}
-
 .details {
   margin-left: 100px;
+}
+
+.rating {
+  margin-left: 1000px;
+}
+
+@media (max-width: 640px) {
+  .slider {
+    height: 300px;
+  }
+  .slider img {
+    margin-top: 50px;
+  }
+  button img {
+    width: 2px;
+    height: 2px;
+  }
+  h1 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .description {
+    margin-top: 50px;
+  }
+  .description-toggle-container {
+    width: 100%;
+  }
+  .description-toggle-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .description-toggle-button {
+    width: 100%;
+    font-size: 14px;
+  }
+  .description-content {
+    width: auto;
+    margin-left: 0;
+  }
+  .photo-details-content {
+    margin-top: 500px;
+  }
+  ul img {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .container3 {
+    margin-top: 0;
+    padding: 10px;
+  }
+  .rating {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .details {
+    margin-left: 0;
+  }
+  .description-toggle-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=slider.css.map */
